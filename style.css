@@ -7,6 +7,21 @@ body {
     cursor: default;
 }
 
+footer {
+    
+    position: fixed;
+    text-align: center;
+    height: 5%;
+    bottom:0%;
+    width: 90%;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.index-footer {
+    margin-left: 4.5%;
+}
+
 a, a:link, a:visited,a:active,a:hover {
     
     cursor: default;
@@ -70,6 +85,8 @@ a, a:link, a:visited,a:active,a:hover {
     border-radius: 3%;
 }
 
+
+
 .product__actions {
     display: flex;
     justify-content: space-between;
@@ -82,14 +99,14 @@ a, a:link, a:visited,a:active,a:hover {
 .product__buy {
   background-color: #fff;
   color: #000;
-  border: 2px solid #898989;
+  border: 2px solid #545454;
   transition-duration: 0.4s;
   padding: 5px 10px;
   border-radius: 10%;
 }
 
 .product__buy:hover {
-    background-color: #898989;
+    background-color: #545454;
   color: white;
 }
 
@@ -113,6 +130,7 @@ a, a:link, a:visited,a:active,a:hover {
     height: 500px;
     object-fit: cover;
     margin-left: 15%;
+  
 }
 
 .black-strip {
@@ -145,6 +163,7 @@ a, a:link, a:visited,a:active,a:hover {
     text-align: right;
     width: 45%;
     font-size: 12px;
+    
 }
 
 
@@ -163,8 +182,6 @@ a, a:link, a:visited,a:active,a:hover {
 
 @media screen and (min-width: 501px) and (max-width: 800px) {
     
-
-    
     .products {
         gap: 3%;
         
@@ -173,6 +190,10 @@ a, a:link, a:visited,a:active,a:hover {
     .product {
         width: 47%;
         margin-top: 5%;
+    }
+
+    footer {
+        position:relative;
     }
 } 
 
@@ -183,6 +204,9 @@ a, a:link, a:visited,a:active,a:hover {
 
     .products {
         gap: 3%;
+    }
+    footer {
+        position:relative;
     }
 }
     
