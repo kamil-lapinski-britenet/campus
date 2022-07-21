@@ -9,17 +9,19 @@ body {
 
 footer {
     
-    position: fixed;
+    position: sticky;
     text-align: center;
     height: 5%;
-    bottom:0%;
+    bottom:4%;
     width: 90%;
     font-size: 12px;
     font-weight: 300;
+    margin-left: 4.5%;
 }
 
 .index-footer {
     margin-left: 4.5%;
+    position: fixed;
 }
 
 a, a:link, a:visited,a:active,a:hover {
@@ -93,7 +95,7 @@ a, a:link, a:visited,a:active,a:hover {
 }
 
   .product:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
   }
   
 .product__buy {
