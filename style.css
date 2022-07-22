@@ -9,10 +9,10 @@ body {
 
 footer {
     
-    position: sticky;
+    position: fixed;
     text-align: center;
     height: 5%;
-    bottom:4%;
+    bottom:2%;
     width: 90%;
     font-size: 12px;
     font-weight: 300;
@@ -21,7 +21,6 @@ footer {
 
 .index-footer {
     margin-left: 4.5%;
-    position: fixed;
 }
 
 a, a:link, a:visited,a:active,a:hover {
