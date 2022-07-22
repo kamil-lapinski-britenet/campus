@@ -7,8 +7,9 @@
     <link href="style.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet">
+<script src="js/productDetailManager.js" defer></script>
 </head>
 <body>
     <div class="content">
@@ -25,29 +26,31 @@
                 <span class="material-symbols-outlined">
                     shopping_cart
                     </span>
-                 
                 <p> Kamil Łapiński </p>
             </div>
         </div>
 
-        <div class="index_photo">
-            <div class="strip-photo">
-                <div class="black-strip"></div>
-            <img src="./img/index.jpg" alt="woman">
-            </div>
-        
-               <div class="index_text">
-                <h1>Fashion International Store: Creative Work</h1>
-                <h3>Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Commodi sunt ratione vero 
-                </h3>
-                <p>Lorem Ipsum</p>
-               </div>
-               
+        <div class="content">
+            <div class="products content_detail">
+            <div class="productEmpty"></div>
+            <div class="product" id="product">
                 
-            </div>
+                    <img src="" id="image" class="product__img"  alt="woman"/>
+                    <div class="product__info">
+                        <h3 id="name"> name </h3>
+                        <p id="desc"> desc </p>
+                        <div class="product__actions">
+                            <p id="price" class="product__price"> 000 PLN </p>
+                            <p class="product__buy"> KUP </p>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="productEmpty"></div>
 
-            <footer class="index-footer">&copy; Kamil Łapiński</footer>
+        </div></div>
+
+            <footer >&copy; Kamil Łapiński</footer>
         </div>
     </div>
 </body>

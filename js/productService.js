@@ -19,8 +19,10 @@ const renderProducts = (products) => {
 
         products.forEach( product => {
             productsElement.innerHTML += `
-                <div class="product">
-                    <img class="product__img" src="img/${product.images.paths}" alt="woman"/>
+            
+                <div class="product" id="product_id">
+                <a href="product_details.html?productId=${product.productId}">
+                    <img class="product__img" src="img/${product.images.paths}" alt="woman"/> </a>
                     <div class="product__info">
                         <h3> ${product.name} </h3>
                         <p> ${product.description} </p>
@@ -29,7 +31,9 @@ const renderProducts = (products) => {
                             <p class="product__buy"> KUP </p>
                         </div>
                     </div>
+                   
                 </div>
+               
             `
         } );
 
