@@ -66,6 +66,11 @@ a--no-style, a:link, a:visited,a:active,a:hover {
     margin-right: 15%;
   }
 
+  .navbar__user > a {
+    margin-top: 7%;
+    margin-right: 10%;
+  }
+
 
 .navbar__navigation > p:first-child > a:hover, .navbar__navigation > p:nth-child(2) > a:hover, .navbar__navigation > p:last-child > a:hover    {
     border-bottom: 1px solid #000;
