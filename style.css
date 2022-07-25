@@ -94,12 +94,35 @@ a--no-style, a:link, a:visited,a:active,a:hover {
     transition: 0.3s;
     background-color: #fff;
     border-radius: 3%;
+    position: relative;
 }
 
 .product__info {
-    
     padding: 2px 16px;
+    padding-bottom: 20%;
+    margin-bottom: 15%;
 }
+
+
+.product__actions {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15%;
+    position: absolute;
+    bottom: 2%;
+    flex-direction: row;
+    gap: 35%;
+    
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+
+
+
+
+
 
 .product > a > .product__img {
     margin-top: 5%;
@@ -125,11 +148,6 @@ a--no-style, a:link, a:visited,a:active,a:hover {
 }
 
 
-.product__actions {
-    display: flex;
-    justify-content: space-between;
- 
-}
 
 
 
@@ -142,9 +160,10 @@ a--no-style, a:link, a:visited,a:active,a:hover {
   color: #000;
   border: 2px solid #545454;
   transition-duration: 0.4s;
-  padding: 5px 10px;
+  padding: 5px 10px 5px 10px;
   border-radius: 10%;
   cursor: pointer;
+  text-align: center;
 }
 
 .product__buy:hover {
@@ -217,6 +236,10 @@ a--no-style, a:link, a:visited,a:active,a:hover {
    flex-direction: row;
 }
 
+
+
+
+
 #product > img {
     height: 500px;
     object-fit: scale-down;
@@ -227,6 +250,12 @@ a--no-style, a:link, a:visited,a:active,a:hover {
     width: 18%;
     height: 600px;
 }
+
+#single_product {
+    gap: 15%;
+    width: 35%;
+}
+
 
 
 
@@ -251,6 +280,13 @@ a--no-style, a:link, a:visited,a:active,a:hover {
     .productEmpty {
         display: none;
     }
+
+    #single_product {
+        gap: 50%;
+        width: 80%;
+    }
+    
+    
     
 } 
 
@@ -277,6 +313,11 @@ a--no-style, a:link, a:visited,a:active,a:hover {
     .productEmpty {
         display: none;
     }
+
+    #single_product {
+        gap: 50%;
+        width: 80%;
+    }
 } 
 
 @media screen and (min-width: 801px) and (max-width: 1024px) {
@@ -298,12 +339,18 @@ a--no-style, a:link, a:visited,a:active,a:hover {
     .productEmpty {
         display: none;
     }
+
+    #single_product {
+        gap: 10%;
+        width: 20%;
+    }
+    
 }
     
 
 
 
-@media screen and (max-width: 1299px) {
+@media screen and (min-width: 1025px) and (max-width: 1299px) {
     .index_photo {
         flex-direction: column;
       }
@@ -353,5 +400,18 @@ a--no-style, a:link, a:visited,a:active,a:hover {
         display: none;
     }
 
+    #single_product {
+        gap: 15%;
+        width: 35%;
+    }
+    
+
 }
    
+@media screen and (min-width: 1300px) and (max-width: 1450px) { 
+    #single_product {
+        gap: 5%;
+    width: 25%;
+    }
+
+}
