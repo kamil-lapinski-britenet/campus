@@ -112,17 +112,7 @@ const performRegister = () => {
 }
 
 
-const hideItems = () => {
-    if(sessionStorage.getItem('user_id') == null) {
-        const hideProducts = document.querySelector("#products");
-        hideProducts.classList.add("hiding");
-        
-    }
-    else {
-        console.log("eloelo");
-    }
 
-}
 
 
 const hideCarts = () => {
@@ -160,7 +150,7 @@ const logout = () => {
 }
 
 hideCarts();
-hideItems();
+
 
 hideRegister();
 
