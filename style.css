@@ -21,6 +21,8 @@ footer {
     padding-bottom: 10px;
 }
 
+
+
 .index-footer {
     margin-left: 4.5%;
 }
@@ -47,7 +49,7 @@ a--no-style, a:link, a:visited,a:active,a:hover {
 .navbar__navigation {
     display: flex;
     gap: 15px;
-    margin-left: 5%;
+    margin-left: 7%;
 }
 
 .navbar__user {
@@ -72,7 +74,7 @@ a--no-style, a:link, a:visited,a:active,a:hover {
   }
 
 
-.navbar__navigation > p:first-child > a:hover, .navbar__navigation > p:nth-child(2) > a:hover, .navbar__navigation > p:last-child > a:hover    {
+.navbar__navigation > p:first-child > a:hover, .navbar__navigation > p:nth-child(2) > a:hover,.navbar__navigation > p:nth-child(3) > a:hover, .navbar__navigation > p:nth-child(4) > a:hover, .navbar__navigation > p:last-child > a:hover    {
     border-bottom: 1px solid #000;
     
 }
@@ -146,10 +148,6 @@ a--no-style, a:link, a:visited,a:active,a:hover {
 .product > a {
     align-items: center;
 }
-
-
-
-
 
   .product:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
@@ -253,10 +251,70 @@ a--no-style, a:link, a:visited,a:active,a:hover {
     width: 35%;
 }
 
+.login__form {
+    display: flex;
+    flex-direction: column;
+    gap: 15%;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
+
+.login__form > input {
+    height: 30px;
+}
+
+.login__form > label, .login__form > input {
+    margin-bottom: 5%;
+    width: 100%;
+}
+
+.login__form > input:last-child {
+    margin-top: 5%;
+    width: 40%;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+ 
+    font-size: 13px;
+    background-color: #fff;
+  color: #000;
+  border: 2px solid #545454;
+  transition-duration: 0.4s;
+  padding-top: 10px;
+  padding-bottom: 25px;
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+.login__form > input:last-child:hover {
+    background-color: #545454;
+    color: white;
+}
+
+#logout {
+    cursor: pointer;
+    
+}
+.hiding {
+    display: none;
+}
 
 
 
-@media (max-width: 500px) {
+
+@media  (max-width: 500px) {
+
+    .login__form {
+        width: 80%;
+    }
+
+    .login__form > input:last-child {
+        width: 50%;
+        font-size: 11px;
+    }
 
     .products {
         flex-direction: column;
@@ -313,13 +371,20 @@ a--no-style, a:link, a:visited,a:active,a:hover {
         gap: 50%;
         width: 80%;
     }
-    
+
+
     
     
 } 
 
-@media (min-width: 501px) and (max-width: 800px) {
-    
+@media (min-width: 500px) and (max-width: 800px) {
+    .login__form {
+        width: 50%;
+    }
+    .login__form > input:last-child {
+        width: 50%;
+    }
+
     .products {
         gap: 3%;
         
@@ -384,6 +449,14 @@ a--no-style, a:link, a:visited,a:active,a:hover {
 } 
 
 @media screen and (min-width: 801px) and (max-width: 1024px) {
+
+    .login__form {
+        width: 40%;
+    }
+    .login__form > input:last-child {
+        width: 50%;
+    }
+
     .product {
         width: 40%;
         margin-top: 5%;
@@ -446,6 +519,14 @@ a--no-style, a:link, a:visited,a:active,a:hover {
 
 
 @media screen and (min-width: 1025px) and (max-width: 1299px) {
+
+    .login__form {
+        width: 30%;
+    }
+
+    .login__form > input:last-child {
+        width: 40%;
+    }
     .index_photo {
         flex-direction: column;
       }
@@ -535,6 +616,12 @@ a--no-style, a:link, a:visited,a:active,a:hover {
 }
    
 @media screen and (min-width: 1300px) and (max-width: 1450px) { 
+    .login__form {
+        width: 30%;
+    }
+    .login__form > input:last-child {
+        width: 50%;
+    }
     #single_product {
         gap: 5%;
     width: 25%;
