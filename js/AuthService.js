@@ -72,17 +72,21 @@ const performLogin = () => {
     login(mail, password)
         .then( data => {
             //TODO zalogowano!
-            window.location.href="index.html";    
-            location.reload();
+           
+            window.location.href="index.html";  
+
             alert('Zalogowano!');
             isLoggedIn();
-        } )
+           
+        } 
+        )
         .catch( err => {
             console.log('Error');
             console.log(JSON.stringify(err));
         });
-
+     
     return false;
+   
 }
 
 const performRegister = () => {
@@ -153,6 +157,5 @@ hideCarts();
 
 
 hideRegister();
-
 
 
