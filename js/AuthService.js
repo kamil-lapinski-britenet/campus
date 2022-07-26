@@ -73,6 +73,7 @@ const performLogin = () => {
         .then( data => {
             //TODO zalogowano!
             window.location.href="index.html";    
+            location.reload();
             alert('Zalogowano!');
             isLoggedIn();
         } )
@@ -123,6 +124,7 @@ const hideItems = () => {
 
 }
 
+
 const hideCarts = () => {
     if(sessionStorage.getItem('user_id') == null) {
         const hideProducts = document.querySelector("#carts");
@@ -158,7 +160,9 @@ const logout = () => {
 }
 
 hideCarts();
-hideRegister();
 hideItems();
+
+hideRegister();
+
 
 
