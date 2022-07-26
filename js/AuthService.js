@@ -17,9 +17,7 @@ const login = async (mail, password) => {
         sessionStorage.setItem('user_id', user_id);
         sessionStorage.setItem('user_token', user_token);
         
-
-        const loggedUser = document.querySelector("#logged__user");
-        loggedUser.innerHTML = sessionStorage.getItem('user_id');
+        
 
         return Promise.resolve();
 
@@ -82,7 +80,7 @@ const performLogin = () => {
         )
         .catch( err => {
             console.log('Error');
-            console.log(JSON.stringify(err));
+            console.log(err);
         });
      
     return false;
@@ -98,8 +96,8 @@ const performRegister = () => {
     const password = document.querySelector('#password').value;
     const telephone = document.querySelector('#telephone').value;
     
-    console.log(mail);
-    console.log(password);
+    //console.log(mail);
+    //console.log(password);
 
     register(name, lastName, mail, address, password, telephone)
         .then( data => {
