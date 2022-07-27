@@ -132,6 +132,8 @@ var productCart;
 
 // }
 
+
+
 document.getElementById("product__buy").addEventListener("click", ()=> {
     let id = parseInt(retrieveProductIdFromURI());
     
@@ -174,6 +176,9 @@ document.getElementById("product__buy").addEventListener("click", ()=> {
 
 
 
+
+
  
-  document.getElementById("cart__button").addEventListener("click", showProducts());
+  //document.getElementById("cart__button").addEventListener("click", );
+
 

@@ -307,7 +307,7 @@ a--no-style, a:link, a:visited,a:active,a:hover {
 #cartUser {
     display: flex;
     
-   width: 50%;
+   width: 60%;
    height: 50%;
     flex-direction: column;
     margin: auto;
@@ -327,17 +327,38 @@ a--no-style, a:link, a:visited,a:active,a:hover {
    
 }
 
+
+
 #cartUser:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
   }
 
 .product__info__cart {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    width: 70%;
     margin: 3%;
+    
     gap: 3%;
    text-align: left;
 }
+
+
+.renderedCartProducts {
+    display: flex;
+    flex-direction: row;
+    gap: 50%;
+    width: 100%;
+}
+
+.renderedCartProducts > div {
+    width: 30%;
+}
+
+
+
+
+
 
 #cart__button {
     width: 170px;
