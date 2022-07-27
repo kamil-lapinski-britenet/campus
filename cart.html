@@ -11,6 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet">
 <script src="js/productDetailManager.js" defer></script>
 <script src="js/AuthService.js" defer></script>
+<script src="js/cartService.js" defer></script>
 </head>
 <body>
     <div class="content">
@@ -36,21 +37,18 @@
 
         <div class="content">
             <div class="products content_detail">
-            <div class="productEmpty"></div>
-            <div class="product" id="product">
-                
-                    <img src="" id="image" class="product__img"  alt="woman"/>
-                    <div class="product__info">
-                        <h3 id="name"> name </h3>
-                        <p id="desc"> desc </p>
-                        <div class="product__actions">
-                            <p id="price" class="product__price"> 000 PLN </p>
-                            <p class="product__buy"> KUP </p>
+      
+            <div  id="cartUser">
+                <div class="product__info__cart">
+                    <div class="product__name">NAZWA PRODUKTU: 34234</div>
+                    <div class="product__amount">ILOŚĆ: 23423</div>
+                </div>
+                <input id="cart__button" class="product__buy" type="button" value="UTWÓRZ KOSZYK">
                         </div>
                     </div>
                    
                 </div>
-                <div class="productEmpty"></div>
+               
 
         </div></div>
 

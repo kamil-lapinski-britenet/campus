@@ -43,6 +43,7 @@ const renderProducts = (products) => {
     }
 }
 
+
 getProducts()
 .then( products => {
     renderProducts(products);

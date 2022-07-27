@@ -29,7 +29,7 @@ const renderProduct = (product) => {
     const desc = document.querySelector('#desc');
     desc.innerText = product.description;
     const price = document.querySelector('#price');
-    price.innerText = `${product.price} PLN`;
+    price.innerText = `${product.price}`;
     const productImage = document.querySelector('#image');
     productImage.src =  `./img/${product.images.paths}`;
    
