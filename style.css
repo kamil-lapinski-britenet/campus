@@ -323,7 +323,7 @@ a--no-style, a:link, a:visited,a:active,a:hover {
         background-color: #fff;
         border-radius: 3%;
         position: relative;
-
+        margin-top: 0;
    
 }
 
@@ -338,6 +338,7 @@ a--no-style, a:link, a:visited,a:active,a:hover {
     flex-direction: column;
     width: 70%;
     margin: 3%;
+    margin-top: 0;
     gap: 3%;
    text-align: left;
 }
@@ -346,18 +347,72 @@ a--no-style, a:link, a:visited,a:active,a:hover {
 .renderedCartProducts {
     display: flex;
     flex-direction: row;
+    position: relative;
     width: 100%;
-    border: 1px solid rgba(0,0,0,0.5)
-    
- 
+    border: 1px solid rgba(0,0,0,0.5);
 }
 
-.renderedCartProducts {
+#cartUser > form > label {
+    margin-top: 3%;
+    margin-bottom: 1%;
+    width: 70%;
+    text-align: left;
+}
+
+#cartUser > :nth-child(3) {
+    border-top: 1px solid rgba(0,0,0,0.5);
+    width: 99%;
+    text-align: center;
+    align-items: center;
+   
   
 }
+#cartUser > :nth-child(3) > input {
+    width: 60%;
+    
+   margin-top: 0%;
+}
+
+#cartUser > :nth-child(3) > input:nth-child(3) {
+    height: 40px;
+    width: 165px;
+    padding: 5px 10px 5px 10px;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #545454;
+    margin-top: -20px;
+
+    border-radius: 3%;
+} 
+
+#cartUser > :nth-child(3) > input:nth-child(3):hover {
+    background-color: #545454;
+    color: #fff;
+}
+
+.renderedCartProducts > button {
+    background-color: #FE6C3A;
+    color: #fff;
+    border: 2px solid #FE6C3A;
+    transition-duration: 0.4s;
+    padding: 5px 10px 5px 10px;
+    height: 40px;
+    border-radius: 10%;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 3%;
+    position: absolute;
+    right: 2%;
+}
+
+.renderedCartProducts > button:hover {
+    background-color: #c63404;
+    border: 2px solid #c13304;
+  color: white;
+  }
 
 .renderedCartProducts > div {
-    margin: 3%;
+    margin: 4%;
 }
 
 
@@ -367,13 +422,29 @@ a--no-style, a:link, a:visited,a:active,a:hover {
     width: 170px;
     margin-left: auto;
     margin-right: auto;
-    display: flex;
+    
     align-items: center;
-    padding: 5px 0px 5px 25px;
+    text-align: center;
+    
     margin-bottom: 3%;
+    height: 40px;
+    border-radius: 3%;
 }
 
 
+.amount {
+    position: absolute;
+    right: 10%;
+}
+
+#cartUser > .nameAmount {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+   margin-left: 10%;
+    margin-top: 2%;
+    gap: 65%;
+}
 
 
 
@@ -445,7 +516,9 @@ a--no-style, a:link, a:visited,a:active,a:hover {
     }
 
 
-    
+    #cartUser > :nth-child(3) > input:nth-child(3) {
+        margin-top: 2%;
+    }
     
 } 
 
@@ -518,9 +591,22 @@ a--no-style, a:link, a:visited,a:active,a:hover {
         width: 90%;
         flex-direction: column;
     }
+    #cartUser > :nth-child(3) > input:nth-child(3) {
+        margin-top: 2%;
+    }
+
+    #cartUser > .nameAmount {
+        
+        gap: 55%;
+    }
 } 
 
 @media screen and (min-width: 801px) and (max-width: 1024px) {
+
+    #cartUser > .nameAmount {
+        
+        gap: 55%;
+    }
 
     .login__form {
         width: 40%;
@@ -583,6 +669,9 @@ a--no-style, a:link, a:visited,a:active,a:hover {
         
         width: 90%;
         text-align: center;
+    }
+    #cartUser > :nth-child(3) > input:nth-child(3) {
+        margin-top: 2%;
     }
     
 }
@@ -683,6 +772,11 @@ a--no-style, a:link, a:visited,a:active,a:hover {
         width: 90%;
         text-align: center;
     }
+    #cartUser > .nameAmount {
+        
+        gap: 55%;
+    }
+
     
 
 }

@@ -13,6 +13,8 @@
 <script src="js/AuthService.js" defer></script>
 <script src="js/cartService.js" defer></script>
 <script src="js/renderCartProducts.js" defer></script>
+<script src="js/addressService.js" defer></script>
+
 </head>
 <body>
     <div class="content">
@@ -37,15 +39,26 @@
         </div>
 
         <div class="content">
+            
             <div class="products content_detail">
-      
+             
             <div  id="cartUser">
+
+                <div class="nameAmount"> <p>NAZWA:</p> <p>ILOŚĆ:</p></div>
+               
                 <div class="product__info__cart">  
                 
                
                     
                 </div>
-                <input onclick="return performCart();" id="cart__button" class="product__buy" type="button" value="UTWÓRZ KOSZYK">
+
+                <form class="login__form" id="login__form">
+                    <label for="addressCart"> ADRES ZAMÓWIENIA: </label>
+                    <input id="addressCart" type="text">
+                    <input onclick="return acceptAddress();" id="accept__address" type="submit" value="ZATWIERDŹ">
+                </form>
+
+                <input onclick="return performCart();" id="cart__button" class="product__buy" type="button" value="ZAMÓW PRODUKTY">
                         </div>
                     </div>
                    
