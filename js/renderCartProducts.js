@@ -12,9 +12,11 @@
            
             <div class="renderedCartProducts">
        
-            <div class=".product__name">${JSON.stringify(element.name)}</div>
+            <div class=".product__name">${(element.name).toString()}</div>
+          
       
-            <div class=".product__amount">${JSON.stringify(element.amount)}</div>
+            <div class=".product__amount">${(element.amount).toString()}</div>
+            <button class="deleteProduct" type="button">X</button>
             </div>
             `;
 

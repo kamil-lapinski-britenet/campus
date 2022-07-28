@@ -40,7 +40,7 @@ return false;
 }
 
 
-const createCart = async () => {
+const createCart = async (cartPrice, userId, productCartId) => {
     const user_token = sessionStorage.getItem('user_token');
     try {
         await fetch('http://localhost:8080/api/v1/cart', {

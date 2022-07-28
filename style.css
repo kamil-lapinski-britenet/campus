@@ -338,7 +338,6 @@ a--no-style, a:link, a:visited,a:active,a:hover {
     flex-direction: column;
     width: 70%;
     margin: 3%;
-    
     gap: 3%;
    text-align: left;
 }
@@ -347,15 +346,19 @@ a--no-style, a:link, a:visited,a:active,a:hover {
 .renderedCartProducts {
     display: flex;
     flex-direction: row;
-    gap: 50%;
     width: 100%;
+    border: 1px solid rgba(0,0,0,0.5)
+    
+ 
+}
+
+.renderedCartProducts {
+  
 }
 
 .renderedCartProducts > div {
-    width: 30%;
+    margin: 3%;
 }
-
-
 
 
 
@@ -369,6 +372,7 @@ a--no-style, a:link, a:visited,a:active,a:hover {
     padding: 5px 0px 5px 25px;
     margin-bottom: 3%;
 }
+
 
 
 
