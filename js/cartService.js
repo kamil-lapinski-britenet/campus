@@ -1,5 +1,6 @@
 
 const createCart = async (cartPrice, userId, productCartId) => {
+   
     const user_token = sessionStorage.getItem('user_token');
     try {
         await fetch('http://localhost:8080/api/v1/cart', {
@@ -24,24 +25,47 @@ const createCart = async (cartPrice, userId, productCartId) => {
 
 
 const performCart = () => {
-    let cartPrice = 0;
-    let userId = sessionStorage.getItem("user_id");
-    let productCartId = 1;
+    let cartPrice = price;
+    let userIdSession = parseInt(sessionStorage.getItem("user_id"));
+    
+    let productCartId = 0;
 
-    createCart( cartPrice, userId, productCartId)
+    createCart( cartPrice, userIdSession, productCartId)
         .then( data => {
+            
+            alert('stworzono koszyk!');
+            getCarts();
+            performCartProducts();
 
-            alert('zrobione!');
         } )
         .catch( err => {
             console.log(err);
             console.log(JSON.stringify(err));
             alert('chujnia')
         });
-
     return false;
 }
 
+const getCarts = () => {
+    return new Promise( (resolve, reject) => {
+        fetch('http://localhost:8080/api/v1/cart')
+            .then( async response => {
+                const carts = await response.json();
+                resolve(carts);
+                console.log(carts);
+                let cartList = Array.from(carts);
+                let cartId = (cartList[cartList.length-1].cartId);
+                sessionStorage.setItem('cartId', cartId);
+               
+            } )
+            .catch( error => {
+                console.log(error);
+                console.log(JSON.stringify(error));
+                
+                reject(error);
+            } );
+    } );
+}
 
 const createCartProducts = async (amount, cartId, productId) => {
     //const user_token = sessionStorage.getItem('user_token');
@@ -68,14 +92,17 @@ const createCartProducts = async (amount, cartId, productId) => {
 
 
 const performCartProducts = () => {
-    let cartPrice = 0;
-    let userId = sessionStorage.getItem("user_id");
-    let productCartId = 1;
-
-    createCart( cartPrice, userId, productCartId)
+    
+    const cart = JSON.parse(sessionStorage.getItem('cartWithProducts'));
+   
+  
+   let cartId = parseInt(sessionStorage.getItem("cartId"));
+   const alld = cart.cartProducts;
+  
+    alld.forEach(e => {
+        createCartProducts( e.amount, cartId+1, e.productId)
         .then( data => {
-
-            alert('zrobione!');
+            //alert('Stworzono cartProducts');
         } )
         .catch( err => {
             console.log(err);
@@ -83,12 +110,39 @@ const performCartProducts = () => {
             alert('chujnia')
         });
 
+
+    })
+
     return false;
 }
 
 
 
-//var productCart;
+const createOrder = async (cartPrice, userId, productCartId) => {
+   
+    const user_token = sessionStorage.getItem('user_token');
+    try {
+        await fetch('http://localhost:8080/api/v1/order', {
+            method: 'POST',
+            headers: {
+                
+                
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                cartPrice: cartPrice,
+                userId: userId,
+                productCartId: productCartId
+            })
+        });
+        return Promise.resolve();
+    } catch (e) {
+        return Promise.reject(e);
+    }
+
+}
+
+
 
 
 

@@ -1,12 +1,13 @@
-
+    let price = 0;
   const renderCartProducts = () => {
     const productName = document.querySelector('.product__name');
     const productAmount = document.querySelector('.product__amount');
     const productInfoCart = document.querySelector('.product__info__cart');
+    
         const cart = sessionStorage.getItem('cartWithProducts');
         const allCartProducts = JSON.parse(cart);
         const alld = allCartProducts.cartProducts;
-        
+       
         alld.forEach(element => {
             productInfoCart.innerHTML += `
            
@@ -20,12 +21,14 @@
             </div>
             `;
 
+            price += parseInt(element.price.slice(0,-4))*element.amount;
             console.log(element.productId);
-            
+            console.log(price);
         });
-       
+        console.log(price);
         console.log(allCartProducts.cartProducts);
-   
+        const priceCart = document.querySelector('.priceCart');
+        priceCart.innerHTML=`CENA: ${price}  PLN`;
       
 }
 
@@ -47,11 +50,13 @@ const deleteProductFromCart = (id) => {
                 if(temp.amount > 1 ) {
                     temp.amount -=1;
                     productList[i] = temp;
+                    price-=temp.price;
                 }
                 
                 else if(temp.amount == 1){
                 productList.splice(i);
                 console.log(productList);
+                
             }
             }
 

@@ -126,6 +126,7 @@ a--no-style, a:link, a:visited,a:active,a:hover {
 
 
 
+
 .product > a > .product__img {
     margin-top: 5%;
     height: 300px;
@@ -159,7 +160,7 @@ a--no-style, a:link, a:visited,a:active,a:hover {
   border: 2px solid #545454;
   transition-duration: 0.4s;
   padding: 5px 10px 5px 10px;
-  border-radius: 10%;
+  border-radius: 3%;
   cursor: pointer;
   text-align: center;
 }
@@ -359,7 +360,11 @@ a--no-style, a:link, a:visited,a:active,a:hover {
     text-align: left;
 }
 
-#cartUser > :nth-child(3) {
+#cartUser > .priceCart {
+    margin-bottom: 2%;
+}
+
+#cartUser > :nth-child(4) {
     border-top: 1px solid rgba(0,0,0,0.5);
     width: 99%;
     text-align: center;
@@ -367,13 +372,13 @@ a--no-style, a:link, a:visited,a:active,a:hover {
    
   
 }
-#cartUser > :nth-child(3) > input {
+#cartUser > :nth-child(4) > input {
     width: 60%;
     
    margin-top: 0%;
 }
 
-#cartUser > :nth-child(3) > input:nth-child(3) {
+#cartUser > :nth-child(4) > input:nth-child(3) {
     height: 40px;
     width: 165px;
     padding: 5px 10px 5px 10px;
@@ -385,7 +390,7 @@ a--no-style, a:link, a:visited,a:active,a:hover {
     border-radius: 3%;
 } 
 
-#cartUser > :nth-child(3) > input:nth-child(3):hover {
+#cartUser > :nth-child(4) > input:nth-child(3):hover {
     background-color: #545454;
     color: #fff;
 }
@@ -519,6 +524,8 @@ a--no-style, a:link, a:visited,a:active,a:hover {
     #cartUser > :nth-child(3) > input:nth-child(3) {
         margin-top: 2%;
     }
+
+  
     
 } 
 
@@ -599,6 +606,8 @@ a--no-style, a:link, a:visited,a:active,a:hover {
         
         gap: 55%;
     }
+
+
 } 
 
 @media screen and (min-width: 801px) and (max-width: 1024px) {
@@ -673,6 +682,8 @@ a--no-style, a:link, a:visited,a:active,a:hover {
     #cartUser > :nth-child(3) > input:nth-child(3) {
         margin-top: 2%;
     }
+
+
     
 }
     
@@ -777,6 +788,8 @@ a--no-style, a:link, a:visited,a:active,a:hover {
         gap: 55%;
     }
 
+
+
     
 
 }
@@ -792,5 +805,7 @@ a--no-style, a:link, a:visited,a:active,a:hover {
         gap: 5%;
     width: 25%;
     }
+
+   
 
 }
