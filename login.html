@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet">
 <script src="js/AuthService.js" defer></script>
+<script src="js/mailView.js" defer></script>
 
 </head>
 <body>
@@ -26,11 +27,13 @@
                 <p role="listitem"><a href="register.html">REJESTRACJA</a></p>
             </div>
             <div class="navbar__user">
+                <p id="userMailId"></p>
                 <a href="cart.html" id="carts">
                     <span class="material-symbols-outlined">
                         shopping_cart
                         </span></a>
                         <p id="logout" onclick="logout()">WYLOGUJ</p>
+                        
             </div>
         </div>
 

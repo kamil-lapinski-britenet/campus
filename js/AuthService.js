@@ -16,8 +16,8 @@ const login = async (mail, password) => {
         const user_token = auth_data.userToken;
         sessionStorage.setItem('user_id', user_id);
         sessionStorage.setItem('user_token', user_token);
-        
-        
+        sessionStorage.setItem('user_mail', mail);
+
 
         return Promise.resolve();
 

@@ -50,12 +50,14 @@ a--no-style, a:link, a:visited,a:active,a:hover {
     display: flex;
     gap: 15px;
     margin-left: 7%;
+   
 }
 
 .navbar__user {
     display: flex;
     flex-direction: row;
     width: 10%;
+    cursor: pointer;
 }
 
 .material-symbols-outlined {
@@ -66,6 +68,7 @@ a--no-style, a:link, a:visited,a:active,a:hover {
     'opsz' 48;
     margin-top: 9%;
     margin-right: 15%;
+    cursor: pointer;
   }
 
   .navbar__user > a {
@@ -76,7 +79,12 @@ a--no-style, a:link, a:visited,a:active,a:hover {
 
 .navbar__navigation > p:first-child > a:hover, .navbar__navigation > p:nth-child(2) > a:hover,.navbar__navigation > p:nth-child(3) > a:hover, .navbar__navigation > p:nth-child(4) > a:hover, .navbar__navigation > p:last-child > a:hover    {
     border-bottom: 1px solid #000;
+    cursor: pointer;
     
+}
+
+.navbar__logo > a {
+    cursor: pointer;
 }
 
 .products {
@@ -451,6 +459,15 @@ a--no-style, a:link, a:visited,a:active,a:hover {
     gap: 65%;
 }
 
+#userMailId {
+
+    font-size: 16px;
+    cursor: default;
+    position: absolute;
+    top: 2%;
+    right: 12%;
+}
+
 
 
 @media  (max-width: 500px) {
@@ -520,12 +537,26 @@ a--no-style, a:link, a:visited,a:active,a:hover {
         width: 80%;
     }
 
+    #cartUser {
+        width: 100%;
+    };
 
     #cartUser > :nth-child(3) > input:nth-child(3) {
         margin-top: 2%;
     }
 
-  
+    .renderedCartProducts > button {
+        padding: 0px 5px 0px 5px;
+        height: 20px;
+        margin-top: 5%;
+       
+    }
+
+    #cartUser > :nth-child(4) > input:nth-child(3) {
+        margin-top: 10px;
+     }
+
+   
     
 } 
 
@@ -607,6 +638,20 @@ a--no-style, a:link, a:visited,a:active,a:hover {
         gap: 55%;
     }
 
+    .renderedCartProducts > button {
+        padding: 0px 5px 0px 5px;
+        height: 20px;
+        margin-top: 5%;
+       
+    }
+
+    #cartUser {
+        width: 100%;
+    }
+
+    #cartUser > :nth-child(4) > input:nth-child(3) {
+        margin-top: 10px;
+     }
 
 } 
 
@@ -684,6 +729,16 @@ a--no-style, a:link, a:visited,a:active,a:hover {
     }
 
 
+    .renderedCartProducts > button {
+        padding: 0px 5px 0px 5px;
+        height: 20px;
+        margin-top: 5%;
+       
+    }
+
+    #cartUser {
+        width: 100%;
+    }
     
 }
     

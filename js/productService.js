@@ -28,7 +28,7 @@ const renderProducts = (products) => {
                         <p> ${product.description} </p>
                         <div class="product__actions">
                             <p class="product__price"> ${product.price} PLN </p>
-                            <p class="product__buy"> KUP </p>
+                           
                         </div>
                     </div>
                    
@@ -36,7 +36,7 @@ const renderProducts = (products) => {
                
             `
         } );
-
+// <p class="product__buy" id="product_buy"> DODAJ DO KOSZYKA </p>
     }
     else{
         throw new Error('Cannot find #products.');
