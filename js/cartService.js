@@ -33,9 +33,10 @@ const performCart = () => {
     createCart( cartPrice, userIdSession, productCartId)
         .then( data => {
             
-            alert('stworzono koszyk!');
+            alert('stworzono zamówienie!');
             getCarts();
             performCartProducts();
+            performOrder();
 
         } )
         .catch( err => {
@@ -102,7 +103,7 @@ const performCartProducts = () => {
     alld.forEach(e => {
         createCartProducts( e.amount, cartId+1, e.productId)
         .then( data => {
-            //alert('Stworzono cartProducts');
+          // alert('Stworzono cartProducts');
         } )
         .catch( err => {
             console.log(err);
@@ -118,9 +119,9 @@ const performCartProducts = () => {
 
 
 
-const createOrder = async (cartPrice, userId, productCartId) => {
+const createOrder = async (status, userId, orderProductId) => {
    
-    const user_token = sessionStorage.getItem('user_token');
+   // const user_token = sessionStorage.getItem('user_token');
     try {
         await fetch('http://localhost:8080/api/v1/order', {
             method: 'POST',
@@ -130,9 +131,9 @@ const createOrder = async (cartPrice, userId, productCartId) => {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                cartPrice: cartPrice,
+                status: status,
                 userId: userId,
-                productCartId: productCartId
+                orderProductId: orderProductId
             })
         });
         return Promise.resolve();
@@ -140,6 +141,165 @@ const createOrder = async (cartPrice, userId, productCartId) => {
         return Promise.reject(e);
     }
 
+}
+
+const performOrder = () => {
+    let status = "nowy";
+    let userIdSession = parseInt(sessionStorage.getItem("user_id"));
+    let orderProductId = 0;
+    //let orderProductId = parseInt(sessionStorage.getItem("orderProductId"));
+
+    createOrder( status, userIdSession, orderProductId)
+        .then( data => {
+            
+        //    alert('stworzono order!');
+            getOrders();
+            performOrderProducts();
+            getOrderProducts();
+         //   alert('jebnie?');
+            performPutOrder();
+         //   alert('nie jeblo!');
+        } )
+        .catch( err => {
+            console.log(err);
+            console.log(JSON.stringify(err));
+            alert('chujnia');
+        });
+    return false;
+}
+
+const getOrders = () => {
+    return new Promise( (resolve, reject) => {
+        fetch('http://localhost:8080/api/v1/order')
+            .then( async response => {
+                const orders = await response.json();
+                resolve(orders);
+                console.log(orders);
+                let orderList = Array.from(orders);
+                let orderId = (orderList[orderList.length-1].orderId);
+                sessionStorage.setItem('orderId', orderId);
+               
+            } )
+            .catch( error => {
+                console.log(error);
+                console.log(JSON.stringify(error));
+                
+                reject(error);
+            } );
+    } );
+}
+
+const createOrderProduct = async (productId, orderId) => {
+   
+    // const user_token = sessionStorage.getItem('user_token');
+     try {
+         await fetch('http://localhost:8080/api/v1/orderProducts', {
+             method: 'POST',
+             headers: {
+                 
+                 
+                 'Content-Type': 'application/json'
+             },
+             body: JSON.stringify({
+                productId: productId,
+                 orderId: orderId
+             })
+         });
+         return Promise.resolve();
+     } catch (e) {
+         return Promise.reject(e);
+     }
+ 
+ }
+
+ const performOrderProducts = () => {
+    
+   let orderId = parseInt(sessionStorage.getItem("orderId"));
+   const cart = JSON.parse(sessionStorage.getItem('cartWithProducts'));
+   const alld = cart.cartProducts;
+  
+    alld.forEach(e => {
+        createOrderProduct( e.productId, orderId+1)
+        .then( data => {
+       //     alert('Stworzono orderProduct');
+
+        } )
+        .catch( err => {
+            console.log(err);
+            console.log(JSON.stringify(err));
+            alert('chujnia')
+        });
+
+
+    })
+
+    return false;
+}
+
+const getOrderProducts = () => {
+    return new Promise( (resolve, reject) => {
+        fetch('http://localhost:8080/api/v1/orderProducts')
+            .then( async response => {
+                const orderProducts = await response.json();
+                resolve(orderProducts);
+                console.log(orderProducts);
+                let orderProductList = Array.from(orderProducts);
+                let orderProductId = (orderProductList[orderProductList.length-1].orderProductId);
+                sessionStorage.setItem('orderProductId', orderProductId);
+                
+            } )
+            .catch( error => {
+                console.log(error);
+                console.log(JSON.stringify(error));
+                
+                reject(error);
+            } );
+    } );
+}
+
+const putOrder = async (orderId, status, userId, orderProductId) => {
+   
+    // const user_token = sessionStorage.getItem('user_token');
+     try {
+         await fetch('http://localhost:8080/api/v1/order', {
+             method: 'PUT',
+             headers: {
+                 
+                 
+                 'Content-Type': 'application/json'
+             },
+             body: JSON.stringify({
+                 orderId: orderId,
+                 status: status,
+                 userId: userId,
+                 orderProductId: orderProductId
+             })
+         });
+         return Promise.resolve();
+     } catch (e) {
+         return Promise.reject(e);
+     }
+ 
+ }
+
+ const performPutOrder = () => {
+    let status = "w trakcie realizacji";
+    let userIdSession = parseInt(sessionStorage.getItem("user_id"));
+    let orderId = parseInt(sessionStorage.getItem('orderId'));
+    let orderProductId = parseInt(sessionStorage.getItem("orderProductId"));
+
+    putOrder( orderId, status, userIdSession, orderProductId)
+        .then( data => {
+            
+            //alert('stworzono putOrder!');
+          
+        } )
+        .catch( err => {
+            console.log(err);
+            console.log(JSON.stringify(err));
+            alert('chujnia');
+        });
+    return false;
 }
 
 

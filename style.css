@@ -116,16 +116,16 @@ a--no-style, a:link, a:visited,a:active,a:hover {
 
 .product__actions {
     display: flex;
-    justify-content: space-between;
+    
     padding-top: 15%;
     position: absolute;
     bottom: 2%;
     flex-direction: row;
-    gap: 35%;
-    
+    gap: 15%;
+    margin-left: -4%;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
+    width: 80%;
 }
 
 
@@ -167,7 +167,7 @@ a--no-style, a:link, a:visited,a:active,a:hover {
   color: #000;
   border: 2px solid #545454;
   transition-duration: 0.4s;
-  padding: 5px 10px 5px 10px;
+  padding: 0px 5px 0px 5px;
   border-radius: 3%;
   cursor: pointer;
   text-align: center;
@@ -469,6 +469,21 @@ a--no-style, a:link, a:visited,a:active,a:hover {
 }
 
 
+.orders {
+    display: flex;
+    width: 100%;
+    
+    align-items: center;
+    flex-direction: column;
+}
+
+.orders > .historyOrder {
+    margin-bottom: 5%;
+    width: 30%;
+    margin-left: 10%;
+}
+
+/*****************************************************************/
 
 @media  (max-width: 500px) {
 
@@ -556,7 +571,38 @@ a--no-style, a:link, a:visited,a:active,a:hover {
         margin-top: 10px;
      }
 
-   
+     
+     .navbar {
+        width: 80%;
+     }
+     .navbar__navigation {
+       display: none;
+       
+     }
+
+     #userMailId {
+        display: none;
+     }
+
+     .material-symbols-outlined {
+        margin-right: 15%;
+        cursor: pointer;
+        margin-top: 15%;
+      }
+    
+      .navbar__user > a {
+        margin-top: 7%;
+        margin-right: 25%;
+        
+      }
+
+      .navbar__user {
+        width: 15%;
+      }
+    
+   .product__actions {
+    margin-left: 2%;
+   }
     
 } 
 
@@ -653,6 +699,10 @@ a--no-style, a:link, a:visited,a:active,a:hover {
         margin-top: 10px;
      }
 
+     .product__actions {
+        margin-left: 2%;
+       }
+
 } 
 
 @media screen and (min-width: 801px) and (max-width: 1024px) {
@@ -739,6 +789,9 @@ a--no-style, a:link, a:visited,a:active,a:hover {
     #cartUser {
         width: 100%;
     }
+    .product__actions {
+        margin-left: 2%;
+       }
     
 }
     
@@ -843,8 +896,12 @@ a--no-style, a:link, a:visited,a:active,a:hover {
         gap: 55%;
     }
 
-
-
+    .product__buy {
+        padding: 0px 5px 0px 5px;
+    }
+    .product__actions {
+        margin-left: 2%;
+       }
     
 
 }
@@ -860,7 +917,11 @@ a--no-style, a:link, a:visited,a:active,a:hover {
         gap: 5%;
     width: 25%;
     }
-
-   
+    .product__buy {
+        padding: 0px 5px 0px 5px;
+    }
+    .product__actions {
+        margin-left: -2%;
+       }
 
 }
