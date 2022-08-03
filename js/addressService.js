@@ -5,8 +5,8 @@ const acceptAddress = () => {
         console.log(address_text);
         alert("Zatwierdzono adres wysyłki!");
         sessionStorage.setItem('addressCart', JSON.stringify(address_text));
-        address_input.setAttribute('readonly', true);
-        address_input.style.backgroundColor = "#d7d7d7";
+        address_input.setAttribute('disabled', true);
+       
     return false;
 }
 

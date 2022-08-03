@@ -6,7 +6,56 @@ body {
     background-color: #fff;
     cursor: default;
 }
+/*************************************************/
+/* Style the navigation menu */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+    display: none;
+  }
+  
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  /* Style navigation menu links */
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+    
+  }
+  
+  /* Style the hamburger menu */
+  .topnav a.icon {
+    background: #fff;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+    cursor: pointer;
+  }
+  
+  /* Style the active link (or home/logo) */
+  .active {
+    background-color: #fff;
+    color: white;
+  }
 
+
+
+
+/*************************************************/
 footer {
     
     position: relative;
@@ -480,12 +529,32 @@ a--no-style, a:link, a:visited,a:active,a:hover {
 .orders > .historyOrder {
     margin-bottom: 5%;
     width: 30%;
-    margin-left: 10%;
+    margin-left: 5%;
+    border-bottom: 1px solid #545454;
 }
 
 /*****************************************************************/
 
 @media  (max-width: 500px) {
+  
+  .topnav p {
+    padding: 10px 16px;
+    margin-top: 1%;
+  }
+
+  .topnav p:hover {
+    background-color: #ddd;
+    color: black;
+    cursor: pointer;
+   
+  }
+   
+    .topnav {
+        display:inline;
+    }
+    .navbar {
+        display: none;
+    }
 
     .login__form {
         width: 80%;
@@ -507,6 +576,9 @@ a--no-style, a:link, a:visited,a:active,a:hover {
 
     .black-strip {
         display: none;
+    }
+    .strip-photo {
+        width: 65%;
     }
 
     .strip-photo > img {
@@ -534,8 +606,9 @@ a--no-style, a:link, a:visited,a:active,a:hover {
 
     .product {
        
-        width: 90%;
+        width: 100%;
         margin-top: 10%;
+       margin-left: 5%;
     }
 
     #product {
@@ -543,6 +616,19 @@ a--no-style, a:link, a:visited,a:active,a:hover {
         width: 90%;
         flex-direction: column;
     }
+
+
+    .products {
+        width: 100%;
+       gap: 0;
+       margin-left: 0;
+       margin-right: 0;
+    }
+
+    #products > .product {
+        margin-left: 25%;
+    }
+    
     .productEmpty {
         display: none;
     }
@@ -607,6 +693,29 @@ a--no-style, a:link, a:visited,a:active,a:hover {
 } 
 
 @media (min-width: 500px) and (max-width: 800px) {
+    
+    .topnav p {
+        padding: 10px 16px;
+        margin-top: 1%;
+      }
+
+  .topnav p:hover {
+    background-color: #ddd;
+    color: black;
+    cursor: pointer;
+   
+  }
+    #logout {
+        margin-left: 14px;
+    }
+    .topnav {
+        display:inline;
+    }
+    .navbar {
+        display: none;
+        
+      }
+     
     .login__form {
         width: 50%;
     }
@@ -706,6 +815,29 @@ a--no-style, a:link, a:visited,a:active,a:hover {
 } 
 
 @media screen and (min-width: 801px) and (max-width: 1024px) {
+    
+    .topnav p {
+        padding: 10px 16px;
+        margin-top: 1%;
+      }
+
+  .topnav p:hover {
+    background-color: #ddd;
+    color: black;
+    cursor: pointer;
+   
+  }
+    .topnav {
+        display: inline;
+    }
+    .navbar {
+        display: none;
+    }
+    
+    #logout {
+        margin-left: 14px;
+    }
+    
 
     #cartUser > .nameAmount {
         

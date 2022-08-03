@@ -121,9 +121,13 @@ const hideCarts = () => {
     if(sessionStorage.getItem('user_id') == null) {
         const hideProducts = document.querySelector("#carts");
         const hideLogout = document.querySelector("#logout");
+       
+        const mobileLogout = document.querySelector("#mobileLogout");
+        
         hideLogout.classList.add("hiding");
         hideProducts.classList.add("hiding");
-      
+       
+        mobileLogout.classList.add("hiding");
         
     }
     else {
