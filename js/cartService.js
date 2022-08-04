@@ -152,18 +152,18 @@ const performOrder = () => {
     createOrder( status, userIdSession, orderProductId)
         .then( data => {
             
-        //    alert('stworzono order!');
+   
             getOrders();
             performOrderProducts();
             getOrderProducts();
-         //   alert('jebnie?');
+      
             performPutOrder();
-         //   alert('nie jeblo!');
+        
         } )
         .catch( err => {
             console.log(err);
             console.log(JSON.stringify(err));
-            alert('chujnia');
+            
         });
     return false;
 }
@@ -285,7 +285,7 @@ const putOrder = async (orderId, status, userId, orderProductId) => {
  const performPutOrder = () => {
     let status = "w trakcie realizacji";
     let userIdSession = parseInt(sessionStorage.getItem("user_id"));
-    let orderId = parseInt(sessionStorage.getItem('orderId'));
+    let orderId = parseInt(sessionStorage.getItem('orderId'+1));
     let orderProductId = parseInt(sessionStorage.getItem("orderProductId"));
 
     putOrder( orderId, status, userIdSession, orderProductId)
@@ -297,7 +297,7 @@ const putOrder = async (orderId, status, userId, orderProductId) => {
         .catch( err => {
             console.log(err);
             console.log(JSON.stringify(err));
-            alert('chujnia');
+          
         });
     return false;
 }
